@@ -1,0 +1,16 @@
+C:\Users\adalb\Desktop\Elisio\011\bin\Debug\net6.0-windows\011.exe
+C:\Users\adalb\Desktop\Elisio\011\bin\Debug\net6.0-windows\011.deps.json
+C:\Users\adalb\Desktop\Elisio\011\bin\Debug\net6.0-windows\011.runtimeconfig.json
+C:\Users\adalb\Desktop\Elisio\011\bin\Debug\net6.0-windows\011.dll
+C:\Users\adalb\Desktop\Elisio\011\bin\Debug\net6.0-windows\011.pdb
+C:\Users\adalb\Desktop\Elisio\011\obj\Debug\net6.0-windows\_011.Form1.resources
+C:\Users\adalb\Desktop\Elisio\011\obj\Debug\net6.0-windows\011.csproj.GenerateResource.cache
+C:\Users\adalb\Desktop\Elisio\011\obj\Debug\net6.0-windows\011.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adalb\Desktop\Elisio\011\obj\Debug\net6.0-windows\011.AssemblyInfoInputs.cache
+C:\Users\adalb\Desktop\Elisio\011\obj\Debug\net6.0-windows\011.AssemblyInfo.cs
+C:\Users\adalb\Desktop\Elisio\011\obj\Debug\net6.0-windows\011.csproj.CoreCompileInputs.cache
+C:\Users\adalb\Desktop\Elisio\011\obj\Debug\net6.0-windows\011.dll
+C:\Users\adalb\Desktop\Elisio\011\obj\Debug\net6.0-windows\refint\011.dll
+C:\Users\adalb\Desktop\Elisio\011\obj\Debug\net6.0-windows\011.pdb
+C:\Users\adalb\Desktop\Elisio\011\obj\Debug\net6.0-windows\011.genruntimeconfig.cache
+C:\Users\adalb\Desktop\Elisio\011\obj\Debug\net6.0-windows\ref\011.dll
