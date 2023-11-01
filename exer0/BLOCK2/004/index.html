@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabuada</title>
+  </head>
+  <body>
+    <input type="number" id="number" placeholder="Insira um número" />
+    <button onclick="showTabuada()">Mostrar Tabuada</button>
+    <textarea id="tabuada" rows="10"></textarea>
+
+    <script>
+      function showTabuada() {
+        let number = document.getElementById("number").value;
+        let tabuada = "";
+        for (let i = 1; i <= 10; i++) {
+          tabuada += `${number} x ${i} = ${number * i}\n`;
+        }
+        document.getElementById("tabuada").value = tabuada;
+      }
+    </script>
+  </body>
+</html>

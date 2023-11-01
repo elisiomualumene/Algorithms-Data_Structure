@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cálculos com Números</title>
+  </head>
+  <body>
+    <label for="min">Valor Mínimo:</label>
+    <input type="number" id="min" min="0" />
+    <label for="max">Valor Máximo:</label>
+    <input type="number" id="max" min="0" />
+    <button onclick="calculate()">Calcular</button>
+    <p id="output"></p>
+
+    <script>
+      function calculate() {
+        let min = parseInt(document.getElementById("min").value);
+        let max = parseInt(document.getElementById("max").value);
+        let countMultiples = 0;
+        let primes = [];
+
+        for (let i = min; i <= max; i++) {
+          if (i % 2 === 0 && i % 3 === 0) {
+            countMultiples++;
+          }
+          if (isPrime(i)) {
+            primes.push(i);
+          }
+        }
+
+        document.getElementById(
+          "output"
+        ).textContent = `Números múltiplos de 2 e 3: ${countMultiples}, Números primos: ${primes}`;
+      }
+
+      function isPrime(num) {
+        if (num <= 1) return false;
+        if (num === 2) return true;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

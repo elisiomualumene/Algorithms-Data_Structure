@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = prompt(
+        "Digite quinze números inteiros separados por espaço: "
+      );
+      let numbers = input.split(" ").map(Number);
+
+      function divideByMax(arr) {
+        let max = Math.max(...arr);
+        let result = arr.map((num) => num / max);
+        return result;
+      }
+
+      let result = divideByMax(numbers);
+      document.write(result);
+    </script>
+  </body>
+</html>

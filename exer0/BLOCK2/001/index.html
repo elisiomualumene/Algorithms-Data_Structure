@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saudação de acordo com a hora do dia</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const name = prompt("Digite o seu nome:");
+      const today = new Date();
+      const currentHour = today.getHours();
+
+      if (currentHour >= 6 && currentHour < 12) {
+        alert(`Bom dia, ${name}!`);
+      } else if (currentHour >= 12 && currentHour < 18) {
+        alert(`Boa tarde, ${name}!`);
+      } else {
+        alert(`Boa noite, ${name}!`);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //bugg
+      function generateWords(word) {
+        let words = [];
+        for (let i = 0; i < 5; i++) {
+          words.push(word + i);
+        }
+        return words;
+      }
+
+      let inputWord = prompt("Digite uma palavra: ");
+      let generatedWords = generateWords(inputWord);
+      console.log("Palavras geradas: ", generatedWords);
+    </script>
+  </body>
+</html>

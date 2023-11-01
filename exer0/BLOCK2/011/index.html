@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tabela de Operações Aritméticas</title>
+  </head>
+  <body>
+    <script>
+      function createTable() {
+        // Leitura dos números
+        let num1 = parseInt(prompt("Insira o primeiro número:"));
+        let num2 = parseInt(prompt("Insira o segundo número:"));
+
+        // Criação da tabela
+        let table = document.createElement("table");
+        let thead = document.createElement("thead");
+        let tbody = document.createElement("tbody");
+
+        // Cabeçalho da tabela
+        let headRow = document.createElement("tr");
+        let th1 = document.createElement("th");
+        let th2 = document.createElement("th");
+        th1.appendChild(document.createTextNode("Operação"));
+        th2.appendChild(document.createTextNode("Valor"));
+        headRow.appendChild(th1);
+        headRow.appendChild(th2);
+        thead.appendChild(headRow);
+        table.appendChild(thead);
+
+        // Operações aritméticas e adição das linhas na tabela
+        let operations = ["+", "-", "*", "/", "%"];
+        operations.forEach(function (operator) {
+          let result;
+          switch (operator) {
+            case "+":
+              result = num1 + num2;
+              break;
+            case "-":
+              result = num1 - num2;
+              break;
+            case "*":
+              result = num1 * num2;
+              break;
+            case "/":
+              result = num1 / num2;
+              break;
+            case "%":
+              result = num1 % num2;
+              break;
+          }
+          let row = document.createElement("tr");
+          let operationData = document.createElement("td");
+          let valueData = document.createElement("td");
+          operationData.appendChild(
+            document.createTextNode(num1 + " " + operator + " " + num2)
+          );
+          valueData.appendChild(document.createTextNode(result));
+          row.appendChild(operationData);
+          row.appendChild(valueData);
+          tbody.appendChild(row);
+        });
+
+        table.appendChild(tbody);
+        document.body.appendChild(table);
+      }
+
+      createTable();
+    </script>
+  </body>
+</html>

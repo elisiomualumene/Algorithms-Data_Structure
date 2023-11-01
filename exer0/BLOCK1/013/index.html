@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Exercício 13
+      function reverseCase(text) {
+        let reversed = "";
+        for (let i = text.length - 1; i >= 0; i--) {
+          reversed += text[i];
+        }
+        document.write(reversed);
+      }
+
+      let inputText = prompt("Digite um texto: ");
+      reverseCase(inputText);
+    </script>
+  </body>
+</html>

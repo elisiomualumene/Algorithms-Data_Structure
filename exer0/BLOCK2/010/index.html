@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" id="inputText" onblur="calculateStats()" />
+
+    <script>
+      function calculateStats() {
+        var inputValues = document.getElementById("inputText").value.split(",");
+        var sum = 0;
+        var max = -Infinity;
+
+        for (var i = 0; i < inputValues.length; i++) {
+          var num = parseFloat(inputValues[i]);
+          if (!isNaN(num)) {
+            sum += num;
+            if (num > max) {
+              max = num;
+            }
+          }
+        }
+
+        var squareResult = "";
+        for (var j = 0; j < 5; j++) {
+          squareResult += (max - j) ** 2 + " ";
+        }
+
+        var maxNumber = Math.max(...inputValues);
+        var minNumber = Math.min(...inputValues);
+
+        var maiorIdade = 0;
+        var menorIdade = 0;
+        for (var k = 0; k < inputValues.length; k++) {
+          if (parseInt(inputValues[k]) >= 18) {
+            maiorIdade++;
+          } else {
+            menorIdade++;
+          }
+        }
+
+        var alturaSexo = "1.75,m;1.65,f;1.80,m;1.70,f;1.68,f;";
+        var alturas = alturaSexo.split(";");
+        var alturaMax = -Infinity;
+        var sexoM = 0;
+        var sexoF = 0;
+        for (var l = 0; l < alturas.length; l++) {
+          var temp = alturas[l].split(",");
+          if (parseFloat(temp[0]) > alturaMax) {
+            alturaMax = parseFloat(temp[0]);
+            if (temp[1] === "m") {
+              sexoM++;
+            } else if (temp[1] === "f") {
+              sexoF++;
+            }
+          }
+        }
+
+        var names = "João;Maria;Pedro;Paulo;";
+        var reversedNames = names.split(";").reverse().join(" ");
+
+        var date = "30/10/2023";
+        var dateComponents = date.split("/");
+        var day = dateComponents[0];
+        var month = dateComponents[1];
+        var year = dateComponents[2];
+
+        console.log("Média: " + sum / inputValues.length);
+        console.log("Quadrado dos números: " + squareResult);
+        console.log("Maior número: " + maxNumber);
+        console.log(
+          "Maior de idade: " + maiorIdade + ", Menor de idade: " + menorIdade
+        );
+        console.log("Sexo masculino: " + sexoM + ", Sexo feminino: " + sexoF);
+        console.log("Nomes invertidos: " + reversedNames);
+        console.log("Dia: " + day + ", Mês: " + month + ", Ano: " + year);
+      }
+    </script>
+  </body>
+</html>

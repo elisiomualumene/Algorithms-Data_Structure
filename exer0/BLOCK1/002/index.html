@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rotate Numbers with 5</title>
+  </head>
+  <body>
+    <input type="text" id="numberInput" oninput="checkForFive()" />
+    <h1 id="result" style="font-size: 40px"></h1>
+
+    <script>
+      let result = document.getElementById("result");
+      function checkForFive() {
+        let input = document.getElementById("numberInput");
+        let value = input.value;
+
+        if (value.includes("5")) {
+          let newValue = value
+            .split("")
+            .map(function (char) {
+              return char === "5" ? revert(char) : char;
+            })
+            .join("");
+
+          result.textContent = newValue;
+        } else {
+          result.textContent = value;
+        }
+      }
+
+
+      const revert = (char) => {
+        let span = document.createElement("span");
+        result.append(span);
+
+        span.textContent = toString(char)
+
+        span.style.color = "red"
+      }
+    </script>
+  </body>
+</html>

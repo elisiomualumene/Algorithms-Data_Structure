@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let input = prompt("Digite vários números separados por espaço: ");
+      let numbers = input.split(" ").map(Number);
+      let evenArray = [];
+      let oddArray = [];
+
+      for (let num of numbers) {
+        if (num % 2 === 0) {
+          evenArray.push(num);
+        } else {
+          oddArray.push(num);
+        }
+      }
+
+      console.log("Números pares: ", evenArray);
+      console.log("Números ímpares: ", oddArray);
+    </script>
+  </body>
+</html>

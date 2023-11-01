@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data por Extenso</title>
+  </head>
+  <body>
+    <script>
+      function dataPorExtenso() {
+        let data = prompt("Insira a data no formato dd/mm/aaaa:");
+        let partes = data.split("/");
+        let dia = partes[0];
+        let mes = partes[1];
+        let ano = partes[2];
+
+        let meses = [
+          "janeiro",
+          "fevereiro",
+          "março",
+          "abril",
+          "maio",
+          "junho",
+          "julho",
+          "agosto",
+          "setembro",
+          "outubro",
+          "novembro",
+          "dezembro",
+        ];
+
+        let dataExtenso = dia + " de " + meses[parseInt(mes) - 1] + " de ";
+
+        if (ano.length === 4) {
+          dataExtenso += converteAno(ano);
+        } else {
+          dataExtenso += "um ano inválido";
+        }
+
+        document.write(dataExtenso);
+      }
+
+      function converteAno(ano) {
+        let unidades = [
+          "",
+          "um",
+          "dois",
+          "três",
+          "quatro",
+          "cinco",
+          "seis",
+          "sete",
+          "oito",
+          "nove",
+        ];
+        let especiais = [
+          "dez",
+          "onze",
+          "doze",
+          "treze",
+          "catorze",
+          "quinze",
+          "dezesseis",
+          "dezessete",
+          "dezoito",
+          "dezenove",
+        ];
+        let dezenas = [
+          "",
+          "",
+          "vinte",
+          "trinta",
+          "quarenta",
+          "cinquenta",
+          "sessenta",
+          "setenta",
+          "oitenta",
+          "noventa",
+        ];
+        let centenas = [
+          "",
+          "cento",
+          "duzentos",
+          "trezentos",
+          "quatrocentos",
+          "quinhentos",
+          "seiscentos",
+          "setecentos",
+          "oitocentos",
+          "novecentos",
+        ];
+
+        let extenso = "";
+
+        if (ano.length === 4) {
+          let milhar = unidades[parseInt(ano[0])];
+          let centena = parseInt(ano.substring(1));
+          console.log(centena, "aqui")
+          if (centena === 0) {
+            extenso = milhar + " mil";
+          } else {
+            if (centena < 10) {
+              extenso = unidades[centena];
+            } else if (centena < 20) {
+              extenso = especiais[centena - 10];
+            } else {
+              let dezena = dezenas[parseInt(ano[1])];
+              let unidade = unidades[parseInt(ano[2])];
+              extenso = dezena + (unidade !== "" ? " e " + unidade : "");
+            }
+            extenso = milhar + " mil " + extenso;
+          }
+        }
+
+        return extenso;
+      }
+
+      dataPorExtenso();
+    </script>
+  </body>
+</html>
